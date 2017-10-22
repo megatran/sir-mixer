@@ -49,7 +49,7 @@ void setup() {
   servo3.attach(dig3);
   servo3.write(upAng3);
   servo3.detach();
-  delay(1001);
+  delay(1000);
   
   servo4.attach(dig4);
   servo4.write(upAng4);
@@ -59,10 +59,10 @@ void setup() {
 
 void loop() {
 
-  dur1 = 3000;
-  dur2 = 3000;
-  dur3 = 3000;
-  dur4 = 3000;
+  dur1 = 5000;
+  dur2 = 5000;
+  dur3 = 5000;
+  dur4 = 5000;
 
   pourDrink(1, dur1);
   delay(1000);
