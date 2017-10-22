@@ -18,18 +18,6 @@ temp_pic_path = os.path.join(temp_data_path, "temporary_pic.png")
 pygame.image.save(img, temp_pic_path)
 pygame.camera.quit()
 
-dbx = dropbox.Dropbox(mixer_secretkey.dropbox_api_key)
-with open(temp_data_path+"/temporary_pic.png", 'rb') as f:
-   dbx.files_upload(f.read(), "/temporary_pic.png", mode=dropbox.files.WriteMode.overwrite)
-
-shared_link = dbx.sharing_create_shared_link("/temporary_pic.png")
-dl_url = re.sub(r"\?dl\=0", "?dl=1", shared_link.url)
-print(dl_url)
-
-azure_api_key = mixer_secretkey.azure_headers
-
-params = urllib.urlencode({})
-
 def classify_emotion_drinks(json_data):
     happy = json_data[0]['scores']['happiness']
     sad = json_data[0]['scores']['sadness']
@@ -53,6 +41,18 @@ def classify_emotion_drinks(json_data):
 	return 20
 #else case:
     return 1
+
+dbx = dropbox.Dropbox(mixer_secretkey.dropbox_api_key)
+with open(temp_data_path+"/temporary_pic.png", 'rb') as f:
+   dbx.files_upload(f.read(), "/temporary_pic.png", mode=dropbox.files.WriteMode.overwrite)
+
+shared_link = dbx.sharing_create_shared_link("/temporary_pic.png")
+dl_url = re.sub(r"\?dl\=0", "?dl=1", shared_link.url)
+print(dl_url)
+
+azure_api_key = mixer_secretkey.azure_headers
+
+params = urllib.urlencode({})
 
 body = "{ 'url': '" + dl_url + "' } "
 
