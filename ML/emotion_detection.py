@@ -1,4 +1,4 @@
-# Author: Shweta Oak and Nhan Tran 
+# Author: Nhan Tran and Shewta
 import mixer_secretkey
 import pygame.image
 import pygame.camera
@@ -42,11 +42,34 @@ try:
     response = conn.getresponse()
     data = response.read()
     print(data)
+    
+     classify_emotion_drinks(data)
     conn.close()
 except Exception as e:
-    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+    print(str(e))
+    #print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
 
+def classify_emotion_drinks(json_data):
+    happy = json_data[0]['scores']['happiness']
+    sad = json_data[0]['scores']['sadness']
+    angry = json_data[0]['scores']['anger']
+
+    emotions_map = {}
+    emotions_map['happy'] = happy
+    emotions_map['sad'] = sad
+    emotions_map['angry'] = angry
+
+    emotions_map_key = list(emotions_map.keys())
+    emotions_map_values = list(emotions_map.values())
+    dominant_emotion = emotions_map_key[emotions_map_values.index(max(emotions_map_values))]
 
 
-
+    if dominant_emotion == "happy":
+	return 80
+    if dominant_emotion == "sad":
+	return 40
+    if dominant_emotion == "angry":
+	return 20
+#else case:
+    return 1
