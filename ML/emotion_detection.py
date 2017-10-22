@@ -30,26 +30,6 @@ azure_api_key = mixer_secretkey.azure_headers
 
 params = urllib.urlencode({})
 
-body = "{ 'url': '" + dl_url + "' } "
-
-
-try:
-    # NOTE: You must use the same region in your REST call as you used to obtain your sub$
-    #   For example, if you obtained your subscription keys from westcentralus, replace "$
-    #   URL below with "westcentralus".
-    conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/emotion/v1.0/recognize?%s" % params, body, azure_api_key)
-    response = conn.getresponse()
-    data = response.read()
-    print(data)
-    
-     classify_emotion_drinks(data)
-    conn.close()
-except Exception as e:
-    print(str(e))
-    #print("[Errno {0}] {1}".format(e.errno, e.strerror))
-
-
 def classify_emotion_drinks(json_data):
     happy = json_data[0]['scores']['happiness']
     sad = json_data[0]['scores']['sadness']
@@ -73,3 +53,22 @@ def classify_emotion_drinks(json_data):
 	return 20
 #else case:
     return 1
+
+body = "{ 'url': '" + dl_url + "' } "
+
+
+try:
+    # NOTE: You must use the same region in your REST call as you used to obtain your sub$
+    #   For example, if you obtained your subscription keys from westcentralus, replace "$
+    #   URL below with "westcentralus".
+    conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
+    conn.request("POST", "/emotion/v1.0/recognize?%s" % params, body, azure_api_key)
+    response = conn.getresponse()
+    data = response.read()
+    print(data)
+    
+     classify_emotion_drinks(data)
+    conn.close()
+except Exception as e:
+    print(str(e))
+    #print("[Errno {0}] {1}".format(e.errno, e.strerror))
