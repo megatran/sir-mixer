@@ -59,8 +59,8 @@ void loop() {
   dur3 = 3000;
   dur4 = 3000;
 
-  /*pourDrink(1, dur1);
-  pourDrink(2, dur2);
+  pourDrink(1, dur1);
+  /*pourDrink(2, dur2);
   pourDrink(3, dur3);
   pourDrink(4, dur4);*/
 
