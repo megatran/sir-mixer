@@ -38,13 +38,13 @@ void setup() {
   servo3.attach(dig3);
   servo4.attach(dig4);
 
-  servo1.write(downAng1);
+  servo1.write(upAng1);
   delay(2000);
-  servo2.write(downAng2);
+  servo2.write(upAng2);
   delay(2000);
-  servo3.write(downAng3);
+  servo3.write(upAng3);
   delay(2000);
-  servo4.write(downAng4);
+  servo4.write(upAng4);
   delay(2000);
 }
 
@@ -59,9 +59,9 @@ void loop() {
   pourDrink(2, dur2);
   pourDrink(3, dur3);
   pourDrink(4, dur4);
-  
+
   //mix();
-  
+
   while (runOnce);
 }
 
@@ -135,7 +135,7 @@ void pourDrink(int whichServo, int duration)
       if (servo3.attached()) servo3.detach();
       if (servo1.attached()) servo1.detach();
 
-      for (int i = upAng4; i <= downAng4; i++)
+      for (int i = upAng4; i >= downAng4; i--)
       {
         servo4.write(i);
         delay(25);
@@ -143,7 +143,7 @@ void pourDrink(int whichServo, int duration)
 
       delay(duration);
 
-      for (int j = downAng4; j >= upAng4; j--)
+      for (int j = downAng4; j <= upAng4; j++)
       {
         servo4.write(j);
         delay(25);
