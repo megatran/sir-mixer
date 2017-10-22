@@ -1,7 +1,7 @@
 #include <Servo.h>
 
-//void pourDrink(int, int);
-//void mix();
+void pourDrink(int, int);
+void mix();
 
 const int dig0 = 2;
 const int dig1 = 3;
