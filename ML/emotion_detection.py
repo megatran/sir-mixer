@@ -1,4 +1,4 @@
-# Author: Nhan Tran and Shewta
+# Author: Shweta Oak and Nhan Tran 
 import mixer_secretkey
 import pygame.image
 import pygame.camera
