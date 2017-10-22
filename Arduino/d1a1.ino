@@ -38,16 +38,23 @@ void setup() {
 
   servo1.attach(dig1);
   servo1.write(upAng1);
+  servo1.detach()
   delay(2000);
+  
   servo2.attach(dig2);
   servo2.write(upAng2);
-  delay(2000);
+  servo2.detach();
+  delay(1000);
+  
   servo3.attach(dig3);
   servo3.write(upAng3);
-  delay(2000);
+  servo3.detach();
+  delay(1000);
+  
   servo4.attach(dig4);
   servo4.write(upAng4);
-  delay(2000);
+  servo4.detach();
+  delay(1000);
 }
 
 void loop() {
@@ -58,8 +65,8 @@ void loop() {
   dur4 = 3000;
 
   pourDrink(1, dur1);
-  /*pourDrink(2, dur2);
-  pourDrink(3, dur3);
+  pourDrink(2, dur2);
+  /*pourDrink(3, dur3);
   pourDrink(4, dur4);*/
 
   //mix();
