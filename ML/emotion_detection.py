@@ -67,8 +67,8 @@ try:
     data = response.read()
     print(data)
     
-     classify_emotion_drinks(data)
+    classify_emotion_drinks(data)
     conn.close()
 except Exception as e:
-    print(str(e))
+    print(e)
     #print("[Errno {0}] {1}".format(e.errno, e.strerror))
