@@ -49,7 +49,7 @@ void setup() {
   servo3.attach(dig3);
   servo3.write(upAng3);
   servo3.detach();
-  delay(1000);
+  delay(1001);
   
   servo4.attach(dig4);
   servo4.write(upAng4);
