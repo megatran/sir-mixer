@@ -43,12 +43,18 @@ void setup() {
 
   servo1.write(upAng1);
   delay(2000);
+  servo1.detach();
   servo2.write(upAng2);
   delay(2000);
+  servo2.detach();
   servo3.write(upAng3);
   delay(2000);
+  servo3.detach();
   servo4.write(upAng4);
   delay(2000);
+  servo4.detach();
+
+  while (runOnce);
 }
 
 void loop() {
