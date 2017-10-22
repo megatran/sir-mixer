@@ -1,0 +1,4 @@
+http==0.2
+urllib3==1.22
+pyimgur==0.6.0
+pygame==1.9.3
