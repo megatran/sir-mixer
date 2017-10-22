@@ -34,11 +34,11 @@ def classify_emotion_drinks(json_data):
 
 
     if dominant_emotion == "happy":
-    return 80
+        return 80
     if dominant_emotion == "sad":
-    return 40
+        return 40
     if dominant_emotion == "angry":
-    return 20
+        return 20
 #else case:
     return 1
 
