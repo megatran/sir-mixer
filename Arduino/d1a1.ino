@@ -70,8 +70,8 @@ void loop() {
   delay(1000);
   pourDrink(3, dur3);
   delay(1000);
-  //pourDrink(4, dur4);
-  //delay(1000);
+  pourDrink(4, dur4);
+  delay(1000);
   
   //mix();
 
