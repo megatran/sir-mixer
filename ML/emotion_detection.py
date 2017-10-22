@@ -6,6 +6,7 @@ import os
 import re
 import dropbox
 import httplib, urllib, base64
+import json
 
 pygame.camera.init()
 cam = pygame.camera.Camera(pygame.camera.list_cameras()[-1])
@@ -67,7 +68,7 @@ try:
     data = response.read()
     print(data)
     
-    classify_emotion_drinks(data)
+    classify_emotion_drinks(json.loads(data))
     conn.close()
 except Exception as e:
     print(e)
