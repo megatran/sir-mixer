@@ -36,7 +36,7 @@ void setup() {
 
   digitalWrite(dig0, LOW);
 
-  //servo1.attach(dig1);
+  servo1.attach(dig1);
   //servo2.attach(dig2);
   //servo3.attach(dig3);
   //servo4.attach(dig4);
