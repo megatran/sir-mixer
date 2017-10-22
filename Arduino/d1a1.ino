@@ -12,7 +12,7 @@ const int dig4 = 6;
 Servo servo1, servo2, servo3, servo4;
 
 int upAng1 = 0;
-int upAng2 = 110;
+int upAng2 = 105;
 int upAng3 = 180;
 int upAng4 = 130;
 
@@ -37,38 +37,43 @@ void setup() {
   digitalWrite(dig0, LOW);
 
   servo1.attach(dig1);
-  servo2.attach(dig2);
-  servo3.attach(dig3);
-  servo4.attach(dig4);
-
   servo1.write(upAng1);
-  delay(2000);
   servo1.detach();
+  delay(1000);
+  
+  servo2.attach(dig2);
   servo2.write(upAng2);
-  delay(2000);
   servo2.detach();
+  delay(1000);
+  
+  servo3.attach(dig3);
   servo3.write(upAng3);
-  delay(2000);
   servo3.detach();
+  delay(1000);
+  
+  servo4.attach(dig4);
   servo4.write(upAng4);
-  delay(2000);
   servo4.detach();
-
-  while (runOnce);
+  delay(1000);
 }
 
 void loop() {
 
-  dur1 = 3000;
-  dur2 = 3000;
-  dur3 = 3000;
-  dur4 = 3000;
+  dur1 = 5000;
+  dur2 = 5000;
+  dur3 = 5000;
+  dur4 = 5000;
 
   pourDrink(1, dur1);
+  delay(1000);
   pourDrink(2, dur2);
+  delay(1000);
   pourDrink(3, dur3);
+  delay(1000);
   pourDrink(4, dur4);
-
+  delay(1000);
+  servo4.detach();
+  
   //mix();
 
   while (runOnce);
