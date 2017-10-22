@@ -14,7 +14,7 @@ Servo servo1, servo2, servo3, servo4;
 int upAng1 = 0;
 int upAng2 = 110;
 int upAng3 = 180;
-int upAng4 = 130;
+int upAng4 = 140;
 
 int downAng1 = 55;
 int downAng2 = 160;
