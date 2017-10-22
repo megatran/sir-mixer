@@ -33,7 +33,7 @@ def classify_emotion_drinks(json_data):
     emotions_map_values = list(emotions_map.values())
     dominant_emotion = emotions_map_key[emotions_map_values.index(max(emotions_map_values))]
 
-
+    print("Dominant emotion is " + dominant_emotion)
     if dominant_emotion == "happy":
         return 80
     if dominant_emotion == "sad":
