@@ -69,8 +69,10 @@ try:
     print(data)
     json_data = json.loads(data)
     if len(json_data) > 0:
-        dominant_proporation = classify_emotion_drinks()
-    dominant_proporation = 1
+        dominant_proporation = classify_emotion_drinks(json_data)
+    else:
+        dominant_proporation = 1
+        print("No emotion detected")
     print(dominant_proporation)
     
     conn.close()
