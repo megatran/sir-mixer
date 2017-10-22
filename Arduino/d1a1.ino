@@ -38,17 +38,17 @@ void setup() {
 
   //servo1.attach(dig1);
   //servo2.attach(dig2);
-  servo3.attach(dig3);
+  //servo3.attach(dig3);
   //servo4.attach(dig4);
 
   /*servo1.write(upAng1);
   delay(2000);
   servo2.write(upAng2);
   delay(2000);*/
-  servo3.write(upAng3);
-  delay(2000);
-  //servo4.write(upAng4);
+  //servo3.write(upAng3);
   //delay(2000);
+  servo4.write(upAng4);
+  delay(2000);
 
   while (runOnce);
 }
