@@ -7,6 +7,7 @@ import re
 import dropbox
 import httplib, urllib, base64
 import json
+import subprocess
 
 pygame.camera.init()
 cam = pygame.camera.Camera(pygame.camera.list_cameras()[-1])
@@ -35,6 +36,7 @@ def classify_emotion_drinks(json_data):
 
     print("Dominant emotion is " + dominant_emotion)
     if dominant_emotion == "happy":
+        subprocess.call(['/home/linaro/Documents/sirmixer/scripts/happy1.sh'])
         return 80
     if dominant_emotion == "sad":
         return 40
