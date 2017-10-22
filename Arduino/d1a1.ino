@@ -1,7 +1,7 @@
 #include <Servo.h>
 
-void pourDrink(int, int);
-void mix();
+//void pourDrink(int, int);
+//void mix();
 
 const int dig0 = 2;
 const int dig1 = 3;
@@ -36,15 +36,15 @@ void setup() {
 
   digitalWrite(dig0, LOW);
 
-  servo1.attach(dig1);
-  servo2.attach(dig2);
+  //servo1.attach(dig1);
+  //servo2.attach(dig2);
   servo3.attach(dig3);
   //servo4.attach(dig4);
 
-  servo1.write(upAng1);
+  /*servo1.write(upAng1);
   delay(2000);
   servo2.write(upAng2);
-  delay(2000);
+  delay(2000);*/
   servo3.write(upAng3);
   delay(2000);
   //servo4.write(upAng4);
@@ -60,10 +60,10 @@ void loop() {
   dur3 = 3000;
   dur4 = 3000;
 
-  pourDrink(1, dur1);
+  /*pourDrink(1, dur1);
   pourDrink(2, dur2);
   pourDrink(3, dur3);
-  pourDrink(4, dur4);
+  pourDrink(4, dur4);*/
 
   //mix();
 
