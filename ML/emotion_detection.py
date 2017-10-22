@@ -68,7 +68,9 @@ try:
     data = response.read()
     print(data)
     
-    classify_emotion_drinks(json.loads(data))
+    dominant_emotion = classify_emotion_drinks(json.loads(data))
+    print(dominant_emotion)
+    
     conn.close()
 except Exception as e:
     print(e)
