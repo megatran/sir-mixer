@@ -67,9 +67,11 @@ try:
     response = conn.getresponse()
     data = response.read()
     print(data)
-    
-    dominant_emotion = classify_emotion_drinks(json.loads(data))
-    print(dominant_emotion)
+    json_data = json.loads(data)
+    if len(json_data) > 0:
+        dominant_proporation = classify_emotion_drinks()
+    dominant_proporation = 1
+    print(dominant_proporation)
     
     conn.close()
 except Exception as e:
