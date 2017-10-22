@@ -65,10 +65,14 @@ void loop() {
   dur4 = 3000;
 
   pourDrink(1, dur1);
+  delay(1000);
   pourDrink(2, dur2);
-  /*pourDrink(3, dur3);
-  pourDrink(4, dur4);*/
-
+  delay(1000);
+  pourDrink(3, dur3);
+  delay(1000);
+  //pourDrink(4, dur4);
+  //delay(1000);
+  
   //mix();
 
   while (runOnce);
