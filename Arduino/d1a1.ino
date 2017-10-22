@@ -38,8 +38,8 @@ void setup() {
 
   servo1.attach(dig1);
   servo1.write(upAng1);
-  servo1.detach()
-  delay(2000);
+  servo1.detach();
+  delay(1000);
   
   servo2.attach(dig2);
   servo2.write(upAng2);
