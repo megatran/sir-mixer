@@ -48,8 +48,6 @@ void setup() {
   servo4.attach(dig4);
   servo4.write(upAng4);
   delay(2000);
-
-  while (runOnce);
 }
 
 void loop() {
