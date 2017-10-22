@@ -39,9 +39,13 @@ void setup() {
   servo4.attach(dig4);
 
   servo1.write(downAng1);
+  delay(2000);
   servo2.write(downAng2);
+  delay(2000);
   servo3.write(downAng3);
+  delay(2000);
   servo4.write(downAng4);
+  delay(2000);
 }
 
 void loop() {
