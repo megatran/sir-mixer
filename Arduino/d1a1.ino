@@ -47,7 +47,7 @@ void setup() {
   delay(2000);*/
   //servo3.write(upAng3);
   //delay(2000);
-  servo4.write(upAng4);
+  servo4.write(downAng4);
   delay(2000);
 
   while (runOnce);
