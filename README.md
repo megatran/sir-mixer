@@ -1,4 +1,11 @@
+<p align = "center">
+    <img src="img/IMG_4749.jpg" />
+</p>
+
 # Sir-Mixer
+A thoughtful bot which can make personalized drinks based on your feelings and/or voice commands
+
+### Inspiration:
 
 One teammate recently turned 21 and the team jokingly suggested making a smart cocktail mixer to brighten up his mood. After some discussions regarding fun features with the hackathon sponsors and figuring out the neat business potential of a smart assistant which can mix all kind of drinks from well-known distilled beverages, family-friendly juices, to get-up-and-go energy refreshment, we decided to turn this idea into reality and also learn new technologies (e.g. Qualcomm board, Microsoft Azure and API, etc) along the way!
 
